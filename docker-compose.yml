@@ -19,7 +19,7 @@ app:
     - "443:443"
     - "22:22"
   volumes:
-    - /home/matt/salestreamsoft/masterstream:/var/www/html
+    - /home/oem/salestreamsoft/masterstream:/var/www/html
   volumes_from:
     - storage
   #env_file:
