@@ -17,6 +17,7 @@ RUN sed -i '1 a xdebug.remote_host=127.0.0.1' /usr/local/etc/php/conf.d/docker-p
 RUN sed -i '1 a xdebug.remote_enable=1' /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN sed -i '1 a xdebug.idekey="PHPSTORM"' /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo 'short_open_tag=On' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+RUN echo "alias phpxdebug='php -dxdebug.remote_host=192.168.10.242'" >> ~/.bashrc
 
 RUN buildDeps=" \
         libfreetype6-dev \
